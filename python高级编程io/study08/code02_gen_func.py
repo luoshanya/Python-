@@ -45,9 +45,8 @@ if __name__ == "__main__":
     # return 与yield的区别
     # print(yield_data())
     # print(return_data())
-
-    # print(fei_ddq_data(60))
+    # print(fei_ddq_data(40))
     # print(fei_gen_data(80))
-    data = 2
-    print([i for i in yield_fei_data(data)])
+    data = 9
+    # print([i for i in yield_fei_data(data)])
     # print([i for i in yield_fei_data(data)][data-1])
