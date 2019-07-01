@@ -82,10 +82,10 @@ class ModelMateClass(type):
 class BasesModel(metaclass=ModelMateClass):
     # 在传参不确定的情况下 使用*args **kwargs
     def __init__(self, *args, **kwargs):
+        # 实例化
+        # return super().__init__()
         for key, value in kwargs.items():
             setattr(self, key, value)
-        # 实例化
-        return super().__init__()
 
     def save(self):
         fields = []
