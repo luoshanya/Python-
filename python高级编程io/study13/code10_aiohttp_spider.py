@@ -55,6 +55,7 @@ async def article_handle(url, session, pool):
     pq = PyQuery(html)
     # 取文章的title
     title = pq('title').text()
+    # 类似创建一个协程对象
     async with pool.acquire() as conn:
         async with conn.cursor() as cur:
             await cur.execute("SELECT 42;")
